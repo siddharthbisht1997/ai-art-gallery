@@ -18,7 +18,9 @@ fetch("./artworks.txt")
     .then((res) => res.text())
     .then((text) => {
         text.split("\n").forEach(element => {
-            figureList.appendChild(createFigureItem(element));
+            if(element.length>0){
+                figureList.appendChild(createFigureItem(element));
+            }
         });
     })
     .catch((e) => console.error(e));
