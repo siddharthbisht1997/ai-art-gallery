@@ -1,3 +1,7 @@
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
+
 function createFigureItem(imageName) {
     let figure = document.createElement('figure');
     figure.className = "gallery-item";
